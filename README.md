@@ -1,2 +1,4 @@
-# W.VI
-Mudanças no site final de webI
+# Informativos Fitness
+- Emily Júnia
+- Micael Pereira da Silva
+- Nífane Borges Guimarães

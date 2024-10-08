@@ -1,0 +1,95 @@
+:root{
+    --verde-claro: #00c468;
+    --verde-escuro: #009a3e;
+    --verde-folha: #72CA57;
+    --verde-folhinha: #8EDC76;
+    --cinza: #bdbdbd;
+    --preto: #000000;
+    --branco: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: center; 
+}
+
+header {
+    background-color: var(--verde-claro);
+    color: var(--preto);
+    padding: 10px 0;
+}
+header .logo {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20px;
+}
+header .logo img {
+    height: 90px;
+    width: auto;
+}
+header nav {
+    margin-top: 10px;
+}
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+header nav ul li a {
+    color: var(--preto);
+    text-decoration: none;
+    font-weight: bold;
+}
+header nav ul li a:hover {
+    background-color: var(--verde-escuro);
+    border-radius: 5px; 
+}
+
+
+
+footer {
+    background-color: var(--verde-claro);
+    color: var(--preto);
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+footer p {
+    margin: 0;
+    padding: 5px;
+}
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+}
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+footer nav ul li a {
+    color: var(--preto);
+    text-decoration: none;
+    
+}
+footer nav ul li a:hover {
+    background-color: var(--verde-escuro);
+    border-radius: 5px; 
+}
+footer  a{
+    display: inline-flex;
+    vertical-align: middle;
+}
+footer a img{
+    height: 20px;
+    width: auto;
+    margin-right: 5px;
+}
