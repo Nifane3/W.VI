@@ -15,13 +15,15 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 20px;
+    padding-bottom: 60px;
 }
 
-.container h1, p {
+.container h1,
+p {
     text-align: center;
 }
 
-/*Cabeçalho*/
+/* Cabeçalho */
 header {
     width: 100%;
 }
@@ -49,11 +51,11 @@ header {
 }
 
 .header-bottom nav ul li {
-    margin: 0 20px; /*Espaçamento entre os links do menu*/
+    margin: 0 20px; /* Espaçamento entre os links do menu */
 }
 
 .header-bottom nav ul li a {
-    color: #0D3B66;
+    color: #333;
     text-decoration: none;
     font-weight: bold;
 }
@@ -62,12 +64,63 @@ header {
     text-decoration: underline;
 }
 
-/*Espaçamento entre o cabeçalho e o carrossel*/
+/* Estilo para caixas de "Preparação Pré-Treino" e "Pós-Treino" */
+.caixa-treino {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+}
+
+.caixa-treino h3 {
+    color: #72CA57;
+    text-align: center;
+}
+
+.caixa-treino p,
+.caixa-treino li {
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.caixa-treino ol,
+.caixa-treino ul {
+    margin-left: 20px;
+}
+
+.caixa-treino li {
+    margin-bottom: 10px;
+}
+
+.caixa-treino h2 {
+    text-align: center;
+}
+
+.caixa-treino-img {
+    width: 50%;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 300px;
+}
+
+.caixa-treino-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Espaçamento entre o cabeçalho e o carrossel */
 main {
     padding-top: 20px;
 }
 
-/*Slider (Carrossel)*/
+/* Slider (Carrossel) */
 .slider-container {
     width: 50%;
     margin: 20px auto;
@@ -141,7 +194,53 @@ main {
     background-color: #72CA57;
 }
 
-/*Vídeos*/
+/* Suplementos */
+.suplementos {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.suplementos-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+}
+
+.suplementos-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.suplementos-card h2 {
+    margin: 10px 0;
+    color: #72CA57;
+}
+
+.suplementos-card p {
+    padding: 0 15px;
+    color: #555;
+}
+
+.suplementos-card a {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    background-color: #72CA57;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.suplementos-card a:hover {
+    background-color: #72CA57;
+}
+
+/* Vídeos */
 .video-grid {
     display: flex;
     justify-content: space-between;
@@ -159,7 +258,7 @@ main {
     text-align: center;
 }
 
-.video-card video {
+.video-card iframe {
     width: 100%; /* O vídeo ocupa toda a largura do cartão */
     height: auto; /* Altura automática para manter a proporção do vídeo */
 }
@@ -178,8 +277,8 @@ footer {
     background-color: #72CA57;
     color: white;
     text-align: center;
-    padding: 20px 0;
-    margin-top: 40px;
+    padding: 20px 0; /* Espaço interno do rodapé */
+    margin: 0; /* Remove margens */
 }
 
 footer nav ul {
@@ -202,4 +301,54 @@ footer nav ul li a {
 footer nav ul li a img {
     width: 24px;
     margin-right: 8px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+    }
+
+    .header-bottom nav ul {
+        flex-direction: column; /* Menu vertical em telas menores */
+    }
+
+    .header-bottom nav ul li {
+        margin: 10px 0; /* Espaçamento entre os itens do menu */
+    }
+
+    .caixa-treino-img {
+        width: 80%; /* Ajusta a largura das imagens */
+    }
+
+    .slider-container {
+        width: 80%; /* Ajusta a largura do slider */
+    }
+
+    .receitas,
+    .suplementos {
+        flex-direction: column; /* Cards em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .receitas-card,
+    .suplementos-card {
+        width: 80%; /* Ajusta a largura dos cards */
+        margin: 10px 0; /* Espaçamento entre os cards */
+    }
+
+    .video-card {
+        width: 80%; /* Ajusta a largura dos cards de vídeo */
+    }
+}
+
+@media (max-width: 768px) {
+    .receitas-card,
+    .suplementos-card {
+        width: 100%; /* Ajusta a largura dos cards para ocupar toda a tela */
+    }
+
+    .video-card {
+        width: 100%; /* Ajusta a largura dos cards de vídeo para ocupar toda a tela */
+    }
 }
